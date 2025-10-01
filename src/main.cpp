@@ -9,7 +9,7 @@ int main(){
     char* c_string_greeting = GreetingUtils::format_as_c_string(greeting);
     std::cout << c_string_greeting;
 
-    delete c_string_greeting;
+    delete[] c_string_greeting;
     return 0;
 
 }
