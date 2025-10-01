@@ -10,11 +10,13 @@ namespace GreetingUtils{
     }
 
     char* format_as_c_string(const std::string& message){
-        char* m = (char*)calloc(message.length() + 1, sizeof(char));
-        for(int i = 0; i < message.length(); i++){
+        int size = message.size();
+        char *m = new char[size+1];
+        
+        for(int i = 0; i < size; i++){
             m[i] = message[i];
         }
-        m[message.length()] = '\0';
+        m[size] = '\0';
         return m;
     }
 }
